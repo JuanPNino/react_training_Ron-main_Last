@@ -1,0 +1,21 @@
+.outputtable {
+    text-align: center;
+    margin-top: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 400px;
+	border: 1px dashed black;
+}
+
+.outputheader {
+    margin-top: 30px;
+    text-align: left;
+    border: 1px solid black;
+}
+
+.outputrow {
+    text-align: left;
+    border: 1px solid black;
+}
+
+
