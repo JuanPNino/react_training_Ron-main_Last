@@ -1,7 +1,10 @@
 import React from 'react'
 import data from '../Pages/mockData'
 import Table from '../Table'
-import { tableConstants } from '../Table-definitions/Employee_Table'
+import { tableConstants } from '../Table-definitions/Employee_Table';
+import {Container} from 'react-bootstrap';
+import {Row} from 'react-bootstrap'
+import {Col} from 'react-bootstrap'
 
 const Dashboard = (props) => {
 	const handleEdit = (item) => () => {
@@ -14,54 +17,28 @@ const Dashboard = (props) => {
 
 	return (
 		<div className='row'>
-			<div className='col-sm-6'>
-				<h4>Default Table</h4>
-				<Table
-					cols={tableConstants(handleEdit)}
-					data={props.details.response.data}
-					hoverable
-				/>
-			</div>
-
-			<div className='col-sm-6'>
-				<h4>Dark Table</h4>
-				<Table
-					cols={tableConstants(handleEdit)}
-					data={props.details.response.data}
-					isDark
-				/>
-			</div>
-
-			<div className='col-sm-6'>
-				<h4>Borderless Table</h4>
-				<Table
-					cols={tableConstants(handleEdit)}
-					data={props.details.response.data}
-					bordered={false}
-					hoverable
-				/>
-			</div>
-
-			<div className='col-sm-6'>
-				<h4>Striped Table</h4>
-				<Table
-					cols={tableConstants(handleEdit)}
-					data={props.details.response.data}
-					striped
-					hoverable
-				/>
-			</div>
-
-			<div className='col-sm-6'>
-				<h4>Hoverable Table</h4>
-				<Table
-					cols={tableConstants(handleEdit)}
-					data={props.details.response.data}
-					hoverable
-					striped
-					size="sm"
-				/>
-			</div>
+			<Container>
+				<Row>
+					<div className='col-sm-6'>
+						<h4>Default Table</h4>
+						<Table
+							cols={tableConstants(handleEdit)}
+							data={props.details.response.data}
+							hoverable
+						/>
+					</div>
+				</Row>
+				<Row xs={1} md={2}>
+					<div className='col-sm-6'>
+						<h4>Dark Table</h4>
+						<Table
+							cols={tableConstants(handleEdit)}
+							data={props.details.response.data}
+							isDark
+						/>
+					</div>
+				</Row>
+			</Container>
 		</div>
 	);
 };
