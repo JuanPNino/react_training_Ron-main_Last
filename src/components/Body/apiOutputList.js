@@ -1,6 +1,6 @@
 import React from 'react';
 import Dashboard from '../Pages/Dashboard';
-import styles from './apiOutputList.module.css';
+/*import styles from './apiOutputList.module.css'*/;
 
 const apiOutputList = (props) => {
 

@@ -26,7 +26,6 @@ export const tableConstants = (handleEdit) => {
 				);
 			},
 		},
-
 		/* {
 			title: 'First Name',
 			render: (rowData) => {

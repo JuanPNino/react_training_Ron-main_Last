@@ -1,8 +1,9 @@
 import React from 'react'
-import data from '../Pages/mockData'
+/*import data from '../Pages/mockData'*/
 import Table from '../Table'
 import { tableConstants } from '../Table-definitions/Employee_Table';
-import {Container, Row, Col} from 'react-bootstrap';
+import {Container, Row, Col, } from 'react-bootstrap';
+
 
 const Dashboard = (props) => {
 	const handleEdit = (item) => () => {
@@ -14,32 +15,47 @@ const Dashboard = (props) => {
 	};
 
 	return (
-		<div className='row'>
-			<Container>
-				<Row>
-					<div className='col-sm-6'>
-						<Col>
-							<h4>Default Table</h4>
-							<Table
-								cols={tableConstants(handleEdit)}
-								data={props.details.response.data}
-								hoverable
-							/>
-						</Col>
-					</div>
-					<div className='col-sm-6'>
-						<Col>
-							<h4>Dark Table</h4>
-							<Table
-								cols={tableConstants(handleEdit)}
-								data={props.details.response.data}
-								isDark
-							/>
-						</Col>
-					</div>
-				</Row>
-			</Container>
-		</div>
+	<div>
+		<Container fluid>
+			<Row>
+				<Col lg={1}> Menu
+					<Row><p></p> </Row>
+					<Row>
+						Inicio
+					</Row>
+					<Row><p></p> </Row>
+					<Row>
+						Clientes
+					</Row>
+					<Row><p></p> </Row>
+					<Row>
+						Productos
+					</Row>
+					<Row><p></p> </Row>
+					<Row>
+						Cerrar
+					</Row>
+				</Col>
+				<Col lg={5}>
+					<h4>Default Table</h4>
+                    <Table
+                        cols={tableConstants(handleEdit)}
+                        data={props.details.response.data}
+                        hoverable
+                    />
+				</Col>
+				<Col lg={5}>
+					<h4>Dark Table</h4>
+					<Table
+						cols={tableConstants(handleEdit)}
+						data={props.details.response.data}
+						isDark
+					/>
+				</Col>
+			</Row>
+			<Row></Row>
+		</Container>
+	</div>
 	);
 };
 
