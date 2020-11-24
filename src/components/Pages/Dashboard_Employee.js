@@ -5,7 +5,7 @@ import { tableConstants } from '../Table-definitions/Employee_Table';
 import {Container, Row, Col, } from 'react-bootstrap';
 
 
-const Dashboard = (props) => {
+const Dashboard_Employee = (props) => {
 	const handleEdit = (item) => () => {
 		console.log(
 			'data to be looked at:',
@@ -37,15 +37,7 @@ const Dashboard = (props) => {
 					</Row>
 				</Col>
 				<Col lg={5}>
-					<h4>Default Table</h4>
-                    <Table
-                        cols={tableConstants(handleEdit)}
-                        data={props.details.response.data}
-                        hoverable
-                    />
-				</Col>
-				<Col lg={5}>
-					<h4>Dark Table</h4>
+					<h4>Employee</h4>
 					<Table
 						cols={tableConstants(handleEdit)}
 						data={props.details.response.data}
@@ -59,4 +51,4 @@ const Dashboard = (props) => {
 	);
 };
 
-export default Dashboard;
+export default Dashboard_Employee;

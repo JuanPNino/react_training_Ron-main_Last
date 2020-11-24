@@ -21,6 +21,7 @@ const BodyApi = (props) => {
 			const response = await ApiFM.getList.getList(payload);
 			setData(response);
 			setApiError('');
+			console.log ("response Contacts:", response);
 		} catch (error) {
 			if (error.response) {
 				await setApiError(error.response);
@@ -31,12 +32,13 @@ const BodyApi = (props) => {
 			}
 		}
 	}
-	async function FMGetList() {
+	async function FMGetListProducts() {
 		try {
 			const payload = { layout: 'Products', database: 'Contacts_React' };
 			const response = await ApiFM.getList.getList(payload);
 			setData(response);
 			setApiError('');
+			console.log ("response Products:", response);
 		} catch (error) {
 			if (error.response) {
 				await setApiError(error.response);
@@ -54,7 +56,7 @@ const BodyApi = (props) => {
 			<button onClick={FMGetList}>
 				Load Employes
 			</button>
-			<button onClick={FMGetList}>
+			<button onClick={FMGetListProducts}>
 				Load Products
 			</button>
 			<p>Data: {displayDetails}</p>

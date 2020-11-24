@@ -2,14 +2,14 @@ import Axios from 'axios';
 
 const axiosFMInstance = Axios.create({
 	baseURL:
-		'https://masku.i-process.nl/fmi/data/vLatest/databases/',
+	'https://masku.i-process.nl/fmi/data/vLatest/databases/',
 });
 
 let token = '';
 
 async function getToken(database) {
-	var username = 'abc';
-	var password = 'abc';
+	var username = 'admin';
+	var password = '4caitlin';
 	var basicAuth = 'Basic ' + btoa(username + ':' + password);
 	return await axiosFMInstance
 		.post(

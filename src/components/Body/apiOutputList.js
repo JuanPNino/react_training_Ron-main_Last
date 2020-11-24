@@ -1,5 +1,6 @@
 import React from 'react';
-import Dashboard from '../Pages/Dashboard';
+import Dashboard_Employee from '../Pages/Dashboard_Employee';
+import Dashboard_Products from '../Pages/Dashboard_Products';
 /*import styles from './apiOutputList.module.css'*/;
 
 const apiOutputList = (props) => {

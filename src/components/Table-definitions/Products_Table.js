@@ -5,15 +5,15 @@ import React from 'react';
 export const tableConstants = (handleEdit) => {
 	return [
 		{
-			title: 'First Name',
+			title: 'Product ID',
 			render: (rowData) => {
-				return <span>{rowData.fieldData.first}</span>;
+				return <span>{rowData.fieldData.productId}</span>;
 			},
 		},
 		{
-			title: 'Last Name',
+			title: 'Product Description',
 			render: (rowData) => {
-				return <span>{rowData.fieldData.last}</span>;
+				return <span>{rowData.fieldData.productDescription}</span>;
 			},
 		},
 		{
