@@ -50,6 +50,19 @@ Nov 10 Homework
 Push to git the files.
 Build a page whit grid.
 
+Nov 24
+Make a nice looking page
+Top menu
+Side menu 
+Bootstrap
+
+Ron
+Simplify the proyect
+Put the table in a table.  Not via a 3 different components
+
+Ron and Juan
+Fix Git problem
+
 
 
 
