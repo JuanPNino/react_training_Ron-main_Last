@@ -18,24 +18,6 @@ const Dashboard_Products = (props) => {
 	<div>
 		<Container fluid>
 			<Row>
-				<Col lg={1}> Menu
-					<Row><p></p> </Row>
-					<Row>
-						Inicio
-					</Row>
-					<Row><p></p> </Row>
-					<Row>
-						Clientes
-					</Row>
-					<Row><p></p> </Row>
-					<Row>
-						Productos
-					</Row>
-					<Row><p></p> </Row>
-					<Row>
-						Cerrar
-					</Row>
-				</Col>
 				<Col lg={5}>
 					<h4>Products</h4>
                     <Table

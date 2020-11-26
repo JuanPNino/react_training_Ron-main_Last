@@ -3,6 +3,8 @@ import React from 'react'
 import Table from '../Table'
 import { tableConstants } from '../Table-definitions/Employee_Table';
 import {Container, Row, Col, } from 'react-bootstrap';
+import { ListGroup } from 'react-bootstrap';
+
 
 
 const Dashboard_Employee = (props) => {
@@ -13,27 +15,17 @@ const Dashboard_Employee = (props) => {
 		);
 		alert(JSON.stringify(item));
 	};
-
 	return (
 	<div>
 		<Container fluid>
 			<Row>
-				<Col lg={1}> Menu
-					<Row><p></p> </Row>
+				<Col lg={3}>
 					<Row>
-						Inicio
-					</Row>
-					<Row><p></p> </Row>
-					<Row>
-						Clientes
-					</Row>
-					<Row><p></p> </Row>
-					<Row>
-						Productos
-					</Row>
-					<Row><p></p> </Row>
-					<Row>
-						Cerrar
+						<ListGroup>
+							<ListGroup.Item>Home</ListGroup.Item>
+							<ListGroup.Item>Features</ListGroup.Item>
+							<ListGroup.Item>Pricing</ListGroup.Item>
+						</ListGroup>
 					</Row>
 				</Col>
 				<Col lg={5}>
@@ -41,11 +33,10 @@ const Dashboard_Employee = (props) => {
 					<Table
 						cols={tableConstants(handleEdit)}
 						data={props.details.response.data}
-						isDark
+						hoverable
 					/>
 				</Col>
 			</Row>
-			<Row></Row>
 		</Container>
 	</div>
 	);

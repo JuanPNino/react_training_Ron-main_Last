@@ -1,16 +1,19 @@
 import React from 'react';
-import styles from './header.module.css';
-import {Container, Row, Col, } from 'react-bootstrap';
+import { Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap';
+
 
 const header = (props) => (
-	<div className={styles.backg}>
-		<Container>
-			<Row>
-				<Col> Menu</Col>
-				<Col> Menu 1</Col>
-				<Col> Menu 2</Col>
-			</Row>
-		</Container>
-	</div>
+	<Navbar bg="primary" variant="dark">
+		<Navbar.Brand href="#home">Header</Navbar.Brand>
+		<Nav className="mr-auto">
+		<Nav.Link href="#home">Home</Nav.Link>
+		<Nav.Link href="#features">Features</Nav.Link>
+		<Nav.Link href="#pricing">Pricing</Nav.Link>
+		</Nav>
+		<Form inline>
+		<FormControl type="text" placeholder="Search" className="mr-sm-2" />
+		<Button variant="outline-light">Search</Button>
+		</Form>
+	</Navbar>
 );
 export default header;

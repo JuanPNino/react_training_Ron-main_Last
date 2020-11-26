@@ -3,6 +3,7 @@ import styles from './body.module.css';
 import ApiFM from '../ApiFM/ApiFM';
 import ApiOutputList from './apiOutputList';
 
+	
 
 
 const BodyApi = (props) => {
@@ -10,10 +11,6 @@ const BodyApi = (props) => {
 	const [apiError, setApiError] = useState('');
 
 	let displayDetails = null;
-
-
-
-
 
 	async function FMGetList() {
 		try {
@@ -51,15 +48,15 @@ const BodyApi = (props) => {
 	}
 
 	return (
-		<div className={styles.backg}>
-			<div>This is a Body</div>
-			<button onClick={FMGetList}>
+		<div>
+			<div className={styles.backg}></div>
+			<button onClick={FMGetList} className={styles.backg}>
 				Load Employes
 			</button>
 			<button onClick={FMGetListProducts}>
 				Load Products
 			</button>
-			<p>Data: {displayDetails}</p>
+			<p>{displayDetails}</p>
 			<ApiOutputList details={data} apiError={apiError} />
 		</div>
 	);

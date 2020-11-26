@@ -16,15 +16,5 @@ export const tableConstants = (handleEdit) => {
 				return <span>{rowData.fieldData.last}</span>;
 			},
 		},
-		{
-			title: 'Action',
-			render: (rowData) => {
-				return (
-					<button className='btn btn-warning' onClick={handleEdit(rowData)}>
-						Edit
-					</button>
-				);
-			},
-		},
 	];
 };

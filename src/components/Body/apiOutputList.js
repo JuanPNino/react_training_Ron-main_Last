@@ -13,7 +13,11 @@ const apiOutputList = (props) => {
         );
     } else if (props.details.data) {
         displayDetails = (
-            displayDetails = <Dashboard details={props.details.data}/>
+            displayDetails = <Dashboard_Employee details={props.details.data}/>
+        );
+    } else if (props.details.data) {
+        displayDetails = (
+            displayDetails = <Dashboard_Products details={props.details.data}/>
         );
     } else {
         displayDetails = (
